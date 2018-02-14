@@ -10,5 +10,11 @@ public class MathHelperTest {
 		MathHelper mathHelper = new MathHelper();
 		assertEquals(mathHelper.Add(""), 0);
 	}
+	
+	@Test
+	public void RetornaElNumeroSiElStringEsUnSoloNumero() {
+		MathHelper mathHelper = new MathHelper();
+		assertEquals(mathHelper.Add("4"), 4);
+	}
 
 }
