@@ -16,5 +16,11 @@ public class MathHelperTest {
 		MathHelper mathHelper = new MathHelper();
 		assertEquals(mathHelper.Add("4"), 4);
 	}
+	
+	@Test
+	public void RetornaLaSumaSiElStringContiene2numerosSeparadosPorComa() {
+		MathHelper mathHelper = new MathHelper();
+		assertEquals(mathHelper.Add("4,5"), 9);
+	}
 
 }
