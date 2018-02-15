@@ -19,18 +19,13 @@ public class MathHelperTest {
 	}
 	
 	@Test
-	public void RetornaLaSumaSiElStringContiene2numerosSeparadosPorComa() {
+	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorComa() {
 		MathHelper mathHelper = new MathHelper();
 		assertEquals(mathHelper.Add("4,5"), 9);
-	}
-	
-	@Test
-	public void RetornaLaSumaSiElStringContiene3oMasnumerosSeparadosPorComa() {
-		MathHelper mathHelper = new MathHelper();
 		assertEquals(mathHelper.Add("4,5,2"), 11);
 		assertEquals(mathHelper.Add("4,5,2,6"), 17);
 	}
-	
+
 	@Test(expected = IllegalArgumentException.class)
 	public void DisparaErrorSiRecibeUnSeparadorIncorrecto() {
 		MathHelper mathHelper = new MathHelper();
