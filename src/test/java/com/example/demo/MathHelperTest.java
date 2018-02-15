@@ -41,4 +41,13 @@ public class MathHelperTest {
 		assertEquals(mathHelper.Add("4:5:2"), 11);
 		assertEquals(mathHelper.Add("4:5:2:6"), 17);
 	}
+	
+	@Test
+	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorCualquierSeparador() {
+		MathHelper mathHelper = new MathHelper();
+		assertEquals(mathHelper.Add("4:5"), 9);
+		assertEquals(mathHelper.Add("4,5;2"), 11);
+		assertEquals(mathHelper.Add("4;5,2:6"), 17);
+	}
+	
 }
