@@ -26,9 +26,19 @@ public class MathHelperTest {
 		assertEquals(mathHelper.Add("4,5,2,6"), 17);
 	}
 
-	@Test(expected = IllegalArgumentException.class)
-	public void DisparaErrorSiRecibeUnSeparadorIncorrecto() {
+	@Test
+	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorPuntoYComa() {
 		MathHelper mathHelper = new MathHelper();
-		mathHelper.Add("4;8");
+		assertEquals(mathHelper.Add("4;5"), 9);
+		assertEquals(mathHelper.Add("4;5;2"), 11);
+		assertEquals(mathHelper.Add("4;5;2;6"), 17);
+	}
+	
+	@Test
+	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorDosPuntos() {
+		MathHelper mathHelper = new MathHelper();
+		assertEquals(mathHelper.Add("4:5"), 9);
+		assertEquals(mathHelper.Add("4:5:2"), 11);
+		assertEquals(mathHelper.Add("4:5:2:6"), 17);
 	}
 }
