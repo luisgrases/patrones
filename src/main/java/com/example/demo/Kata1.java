@@ -2,7 +2,7 @@ package com.example.demo;
 
 import java.util.Arrays;
 
-public class MathHelper {
+public class Kata1 {
 
 	public int Add(String string) {
 		if (string == "") return 0;
