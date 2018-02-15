@@ -13,17 +13,14 @@ public class Kata2 {
  
         for (int i = 3; i <= Math.sqrt(n); i+= 2) {
             while (n % i == 0) {
-            	result.add(i);
-                n /= i;
+            		result.add(i);
+            		n /= i;
             }
         }
         
         if (n > 2) result.add(n);
         
-        Integer[] arr = {};
-        return result.toArray(arr);
-        
-        
+        return result.toArray(new Integer[]{});
         
 	}
 }
