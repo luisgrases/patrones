@@ -25,8 +25,14 @@ public class MathHelperTest {
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
-	public void RetornaErrorSiRecibeMasDeDosParametros() {
+	public void DisparaErrorSiRecibeMasDeDosParametros() {
 		MathHelper mathHelper = new MathHelper();
 		mathHelper.Add("4,5,8");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void DisparaErrorSiRecibeUnSeparadorIncorrecto() {
+		MathHelper mathHelper = new MathHelper();
+		mathHelper.Add("4;8");
 	}
 }
