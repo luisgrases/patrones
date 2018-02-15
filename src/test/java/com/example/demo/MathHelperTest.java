@@ -24,10 +24,11 @@ public class MathHelperTest {
 		assertEquals(mathHelper.Add("4,5"), 9);
 	}
 	
-	@Test(expected = IllegalArgumentException.class)
-	public void DisparaErrorSiRecibeMasDeDosParametros() {
+	@Test
+	public void RetornaLaSumaSiElStringContiene3oMasnumerosSeparadosPorComa() {
 		MathHelper mathHelper = new MathHelper();
-		mathHelper.Add("4,5,8");
+		assertEquals(mathHelper.Add("4,5,2"), 11);
+		assertEquals(mathHelper.Add("4,5,2,6"), 17);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
