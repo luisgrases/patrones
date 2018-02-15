@@ -3,24 +3,24 @@ package com.example.demo;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class MathHelperTest {
+public class Kata1Test {
 	
 	
 	@Test
 	public void Retorna0SiElStringEsVacio() {
-		MathHelper mathHelper = new MathHelper();
-		assertEquals(mathHelper.Add(""), 0);
+		Kata1 kata1 = new Kata1();
+		assertEquals(kata1.Add(""), 0);
 	}
 	
 	@Test
 	public void RetornaElNumeroSiElStringEsUnSoloNumero() {
-		MathHelper mathHelper = new MathHelper();
+		Kata1 mathHelper = new Kata1();
 		assertEquals(mathHelper.Add("4"), 4);
 	}
 	
 	@Test
 	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorComa() {
-		MathHelper mathHelper = new MathHelper();
+		Kata1 mathHelper = new Kata1();
 		assertEquals(mathHelper.Add("4,5"), 9);
 		assertEquals(mathHelper.Add("4,5,2"), 11);
 		assertEquals(mathHelper.Add("4,5,2,6"), 17);
@@ -28,7 +28,7 @@ public class MathHelperTest {
 
 	@Test
 	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorPuntoYComa() {
-		MathHelper mathHelper = new MathHelper();
+		Kata1 mathHelper = new Kata1();
 		assertEquals(mathHelper.Add("4;5"), 9);
 		assertEquals(mathHelper.Add("4;5;2"), 11);
 		assertEquals(mathHelper.Add("4;5;2;6"), 17);
@@ -36,7 +36,7 @@ public class MathHelperTest {
 	
 	@Test
 	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorDosPuntos() {
-		MathHelper mathHelper = new MathHelper();
+		Kata1 mathHelper = new Kata1();
 		assertEquals(mathHelper.Add("4:5"), 9);
 		assertEquals(mathHelper.Add("4:5:2"), 11);
 		assertEquals(mathHelper.Add("4:5:2:6"), 17);
@@ -44,7 +44,7 @@ public class MathHelperTest {
 	
 	@Test
 	public void RetornaLaSumaSiElStringContiene2oMasnumerosSeparadosPorCualquierSeparador() {
-		MathHelper mathHelper = new MathHelper();
+		Kata1 mathHelper = new Kata1();
 		assertEquals(mathHelper.Add("4:5"), 9);
 		assertEquals(mathHelper.Add("4,5;2"), 11);
 		assertEquals(mathHelper.Add("4;5,2:6"), 17);
