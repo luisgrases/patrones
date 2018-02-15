@@ -4,7 +4,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MathHelperTest {
-
+	
+	
 	@Test
 	public void Retorna0SiElStringEsVacio() {
 		MathHelper mathHelper = new MathHelper();
@@ -22,5 +23,10 @@ public class MathHelperTest {
 		MathHelper mathHelper = new MathHelper();
 		assertEquals(mathHelper.Add("4,5"), 9);
 	}
-
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void RetornaErrorSiRecibeMasDeDosParametros() {
+		MathHelper mathHelper = new MathHelper();
+		mathHelper.Add("4,5,8");
+	}
 }
